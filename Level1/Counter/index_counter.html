@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h2 {
+            font-size: 7em;
+        }
+        
+        div {
+            margin: -3.5em 20em;
+            background-color: orangered;
+            text-align: center;
+        }
+        
+        .dot {
+            height: 7em;
+            width: 7em;
+            background-color: greenyellow;
+            border-radius: 50%;
+            display: inline-block;
+            /*To allow users to resize the text (in the browser menu), 
+            use em instead of pixels.1em is equal to the current 
+            font size. The default text size in browsers is 16px. So, the default 
+            size of 1em is 16px. The size can be calculated from pixels to em using 
+            this formula: pixels/16=em*/
+        }
+        
+        .dot-TL {
+            margin-left: 17em;
+            z-index: -1;
+        }
+        
+        .dot-TH {
+            margin-left: 50em;
+        }
+        
+        .button {
+            font-size: 7em;
+            color: white;
+            display: grid;
+            height: 1.1em;
+            width: 1.1em;
+            background-color: rgb(72, 0, 255);
+            place-content: center;
+            border-radius: 50%;
+            display: inline-block;
+            font-family: "Courier New"
+        }
+        
+        h1.intro {
+            color: blue;
+        }
+    </style>
+</head>
+<header>
+    <span class="dot dot-TL">TL</span>
+    <p>Sentrer</p>
+    <span class="dot dot-TH">TH</span>
+</header>
+
+<body>
+    <div>
+        <!--Use wrapper element  <div>  -->
+        <button class="button" id='increment-btn' onclick="increment()">+</button>
+
+        <h2 id="count-el">1</h2>
+        <button class="button" id="decrement-btn" onclick="decrement()">-</button>
+
+        <script src="round_buttons.js"></script>
+    </div>
+
+</body>
+
+</html>
